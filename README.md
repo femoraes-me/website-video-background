@@ -14,7 +14,7 @@
 ## Preview
 
 <p align="center">
-    <img src="" width="700px">
+    <img src="index.png" width="700px">
 </p>
 
 ---
