@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --overlay-color : #03a9f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #eee;
+    z-index: 2;
+    transition: 0.7s;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toogle {
+    background: url('menu.png');
+    height: 60px;
+    width: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+.toogle.active {
+    background: url('close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.showcase .text {
+    z-index: 10;
+    position: relative;
+}
+
+.showcase .overlay{
+    background: var(--overlay-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+}
+
+.showcase .text h2{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 5em;
+    line-height: 1em;
+}
+
+.showcase .text h3 {
+    text-transform: uppercase;
+    font-size: 4em;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.showcase .text p {
+    margin: 20px 0px;
+    max-width: 700px;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.showcase .text a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #eee;
+    color: #333;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    font-weight: 500;
+    transition-duration: 0.2s;
+}
+
+.showcase .text a:hover {
+    letter-spacing: 6px;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+}
+
+.social ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    filter: invert(1);
+    transform: scale(0.5);
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+}
+
+.menu ul li a:hover {
+    color: var(--overlay-color);
+}
+
+@media (max-width: 798px) {
+    .showcase, .showcase header {
+        padding: 40px;
+    }
+
+    .showcase .text h2 {
+        font-size: 3em;
+    }
+
+    .showcase .text h3 {
+        font-size: 2em;
+    }
+}
